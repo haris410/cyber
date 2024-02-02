@@ -10,3 +10,12 @@ object = hashlib.sha256(string)
 hexa_digest = object.hexdigest()
 
 print(hexa_digest)
+
+
+
+import hashlib
+
+def hash(password):
+    return hashlib.sha256(password.encode('utf-8')).hexdigest()
+    
+print("Hashed Password:", hash(input("Enter the password: ")))
