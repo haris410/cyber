@@ -22,4 +22,17 @@ else:
 password = generate_password(password_lenght)
 print(f"generated password is: {password}")
 
-                        
+
+
+import random
+import string
+
+def generate_random_password(length=8):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+
+password_length = int(input("Enter the length of the password (default is 8): ") or 8)
+generated_password = generate_random_password(password_length)
+print("Generated Password:", generated_password)
