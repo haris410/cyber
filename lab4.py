@@ -7,7 +7,7 @@
 import re
 
 def validate(password):
-        # pattern = r"^[A-Za-z\d@#$%^&*()]{8,}$"
+        
         pattern = r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&*()]).{8,}$"
         
         if bool(re.match(pattern, password)):
